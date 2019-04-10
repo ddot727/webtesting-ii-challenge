@@ -11,7 +11,12 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <Display state={this.state} />
+        <Display
+          strikes={this.state.strikes}
+          balls={this.state.balls}
+          fouls={this.state.fouls}
+          hits={this.state.hits}
+        />
         <button onClick={this.strike}>Strike</button>
         &nbsp;
         <button onClick={this.ball}>Ball</button>
